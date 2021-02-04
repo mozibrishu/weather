@@ -2,7 +2,7 @@ getTemperatureDetails("dhaka");
 document.getElementById("search-btn").addEventListener("click",()=>{
    let cityName = document.getElementById("inputCityName").value;
    if(!(cityName)){
-    showWarning("Input a city name.");
+    showWarning("Input a location. e.g. Chittagong etc.");
    }
    else{
     getTemperatureDetails(cityName);
@@ -30,7 +30,7 @@ function getTemperatureDetails(cityName) {
             showWarning(" ");
         })
         .catch(err =>{
-            showWarning("City Not Found. Try Again.");
+            showWarning("Location Not Found. Try Again.");
         })
 }
 
